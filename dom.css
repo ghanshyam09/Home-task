@@ -1,0 +1,62 @@
+.select {
+  display: flex;
+  justify-content: space-around;
+}
+.first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1em;
+  background-color: lightgrey;
+}
+
+button {
+  margin: 1em;
+  background-color: green;
+  color: white;
+}
+.second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1em;
+  background-color: lightgrey;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+}
+.insert {
+  display: flex;
+  justify-content: space-around;
+}
+p {
+  text-align: center;
+}
+#table {
+  display: flex;
+  flex-direction: column;
+}
+.one {
+  background-color: aqua;
+  width: 200px;
+  height: 230px;
+}
+.three {
+  background-color: lightcoral;
+  width: 200px;
+  height: 230px;
+}
+.third {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1em;
+  background-color: lightgrey;
+}
