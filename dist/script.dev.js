@@ -1,6 +1,6 @@
 "use strict";
 
-var API_KEY = "AIzaSyAzkKmaRDCqz-8c3EvV-vdM3AnOHRdOt2k";
+var API_KEY = "AIzaSyCNULtO7XaQlMPEdA816XkcyHNDz_jt0Y4";
 var prevSearch = "",
     pageToken = " ",
     prevToken,
