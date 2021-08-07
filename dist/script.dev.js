@@ -76,15 +76,16 @@ function getData(search, callback) {
           page = document.getElementById("page");
           content = page.innerHTML;
           page.innerHTML = "";
-          _context2.next = 7;
+          document.getElementById("spinner").className = "spinner";
+          _context2.next = 8;
           return regeneratorRuntime.awrap(fetch("https://www.googleapis.com/youtube/v3/search?key=\n      ".concat(API_KEY, "\n      &type=video&part=snippet&pageToken=").concat(pageToken, "&maxResults=15&q=\n      ").concat(search)));
 
-        case 7:
+        case 8:
           response = _context2.sent;
-          _context2.next = 10;
+          _context2.next = 11;
           return regeneratorRuntime.awrap(response.json());
 
-        case 10:
+        case 11:
           snippet = _context2.sent;
           data = snippet.items;
           console.log("pppp");
@@ -92,7 +93,7 @@ function getData(search, callback) {
           prevToken = snippet.prevPageToken;
           callback(snippet.items, getChannelinfo);
 
-        case 16:
+        case 17:
         case "end":
           return _context2.stop();
       }
@@ -238,6 +239,7 @@ function createElements(tablecontent) {
     articles.push(articleData);
   }); // console.log(articles[0]);
 
+  document.getElementById("spinner").className = "";
   articles.forEach(function (item) {
     var anchor = document.createElement("a");
     var article = document.createElement("article");

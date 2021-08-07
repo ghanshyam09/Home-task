@@ -52,6 +52,7 @@ async function getData(search, callback) {
   var page = document.getElementById("page");
   content = page.innerHTML;
   page.innerHTML = "";
+  document.getElementById("spinner").className = "spinner";
   let response = await fetch(
     `https://www.googleapis.com/youtube/v3/search?key=
       ${API_KEY}
@@ -142,6 +143,7 @@ function createElements(tablecontent) {
   });
   // console.log(articles[0]);
 
+  document.getElementById("spinner").className = "";
   articles.forEach((item) => {
     let anchor = document.createElement("a");
     let article = document.createElement("article");
