@@ -218,9 +218,9 @@ function changePage(tag) {
   let curr = document.querySelector(".pagination-btn li.active");
 
   if (curr.textContent < tag.textContent) {
-    pageToken = nextToken;
+    if (nextToken) pageToken = nextToken;
   } else if (curr.textContent > tag.textContent) {
-    pageToken = prevToken;
+    if (prevToken) pageToken = prevToken;
   }
   var c = tag.className;
   tag.className = curr.className;
