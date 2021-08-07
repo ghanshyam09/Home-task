@@ -45,7 +45,7 @@ async function stats(vid) {
 }
 
 var data;
-getData("Music", getStats);
+getData("", getStats);
 async function getData(search, callback) {
   var main = document.getElementById("content");
   main.innerHTML = "";
