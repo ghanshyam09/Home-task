@@ -1,62 +1,288 @@
-.select {
-  display: flex;
-  justify-content: space-around;
+* {
+  margin: 0;
+  font-family: Roboto;
 }
-.first {
+ul.topnav {
+  list-style-type: none;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 1em;
-  background-color: lightgrey;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(119, 119, 119);
 }
 
-button {
-  margin: 1em;
-  background-color: green;
+ul.topnav li a {
+  display: inline-block;
   color: white;
-}
-.second {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 1em;
-  background-color: lightgrey;
-}
-.input {
-  display: flex;
-  flex-direction: column;
-}
-.insert {
-  display: flex;
-  justify-content: space-around;
-}
-p {
   text-align: center;
+  padding: 14px 16px;
+  font-size: larger;
+  text-decoration: none;
 }
-#table {
-  display: flex;
-  flex-direction: column;
+header {
+  margin: 2em 2em 1em 2em;
 }
-.one {
-  background-color: aqua;
-  width: 200px;
-  height: 230px;
+ul.topnav li a:hover:not(.active) {
+  background-color: #111;
 }
-.three {
-  background-color: lightcoral;
-  width: 200px;
-  height: 230px;
+
+ul.topnav li a.active {
+  background-color: #111;
 }
-.third {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 1em;
-  background-color: lightgrey;
+
+@media screen and (min-width: 600px) {
+  .input-field {
+    display: inline-block;
+    height: 2rem;
+    width: 40rem;
+    color: #000000;
+
+    text-indent: 1em;
+    background-color: #ffffff;
+    border-radius: 0;
+    border: 1px solid rgb(3, 3, 3);
+  }
+  .input {
+    display: flex;
+    margin: 1rem 2rem 1rem 2rem;
+    justify-content: center;
+    padding: 1em;
+    border-bottom: 1px solid #000000;
+  }
+  button:active {
+    background-color: #bd2020;
+  }
+  button:hover {
+    background-color: #bd2020;
+  }
+  .search_button {
+    display: inline-block;
+    border: 0.5px solid #000000;
+    border-radius: 0;
+    padding: 0em 1em 0em 1em;
+    width: max-content;
+    color: #ececec;
+    background-color: #ff0000;
+  }
+  .data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 200px;
+    padding: 1em 1em 0 2em;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .table-content {
+    margin: 1rem;
+  }
+  body {
+    margin: 1em 3em 1em 3em;
+  }
+  h3,
+  span,
+  p {
+    color: #000000;
+  }
+  span {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px;
+  }
+  .item {
+    /* color: inherit; */
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border: 0.5px solid rgb(168, 168, 168);
+    border-radius: 8px;
+    margin: 2rem;
+    background-color: rgb(245, 239, 239);
+    text-decoration: none;
+  }
+  article:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .table-content a {
+    text-decoration: none;
+  }
+  .thumb {
+    height: 10rem;
+    width: 16rem;
+    border-radius: 4px;
+  }
+  .channel-thumb {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  .channel-info span {
+    font-size: 14px;
+  }
+  .channel-info {
+    display: flex;
+    padding: 10px 0 5px 0;
+  }
+  .details {
+    padding: 8px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pagination {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pagination-btn {
+    display: flex;
+  }
+  .pagination-btn li {
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin: 0.5rem;
+    background-color: #04aa6d;
+    color: white;
+  }
+  .pagination-btn li.active {
+    background-color: #ddd;
+    color: black;
+  }
+  .pagination-btn li:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ddd;
+    color: black;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .input-field {
+    display: inline-block;
+    height: 2rem;
+    width: 17em;
+    border-radius: 0;
+    border: 1px solid rgb(3, 3, 3);
+  }
+
+  .input {
+    display: flex;
+    margin: 0.5em 0em 1em;
+    justify-content: center;
+  }
+  button:active {
+    background-color: #bd2020;
+  }
+  .search_button {
+    display: inline-block;
+    border: 0.5px solid #000000;
+    border-radius: 0;
+    padding: 0em 1em 0em 1em;
+    width: max-content;
+    color: #ececec;
+    background-color: #ff0000;
+  }
+  .data {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    margin: 2em;
+  }
+  ul.topnav {
+    display: flex;
+    overflow-x: scroll;
+    white-space: normal;
+    border: 1px solid black;
+  }
+
+  ul.topnav li a {
+    padding: 10px 7px;
+    /* color: #000000; */
+  }
+  ul.topnav li a.active {
+    color: white;
+  }
+
+  h3,
+  span,
+  p {
+    color: #000000;
+  }
+  span {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px;
+  }
+  .item {
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    flex-direction: column;
+    border: 0.5px solid rgb(194, 194, 194);
+    border-radius: 8px;
+    margin: 2rem;
+    background-color: rgb(245, 239, 239);
+    text-decoration: none;
+  }
+
+  .table-content a {
+    text-decoration: none;
+  }
+  .logo {
+    width: 120px;
+    padding: 10px;
+  }
+  .thumb {
+    height: 10rem;
+
+    border-radius: 4px;
+  }
+  .channel-thumb {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+  .channel-info {
+    display: flex;
+    padding: 10px 0 5px 0;
+  }
+  .details {
+    padding: 1em;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pagination-btn {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  .pagination-btn li {
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    margin: 0.5rem;
+    background-color: #04aa6d;
+    color: white;
+  }
+  .pagination-btn li.active {
+    background-color: #ddd;
+    color: black;
+  }
 }

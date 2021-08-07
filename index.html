@@ -6,55 +6,16 @@
     <title>DOM</title>
   </head>
   <body>
-    <div class="select" id="choice">
-      <div class="first" id="div1">
-        <h1>Insert Div</h1>
-        <div class="input">
-          <label>Insert the div in middle</label>
-          <!-- <input type="text" name="add div" id="i1" /> -->
-        </div>
-        <button onclick="insert()">Insert</button>
-      </div>
-      <div class="second" id="div2">
-        <h1>Create cells</h1>
-        <div class="input">
-          <label>Enter the rows</label>
-          <input type="text" id="row" /><br />
-          <label>Enter the cols</label>
-          <input type="text" id="col" />
-        </div>
-
-        <button
-          onclick="submit(document.getElementById('row').value,document.getElementById('col').value)"
-        >
-          Generate
-        </button>
-      </div>
-      <div class="third" id="div3">
-        <h1>Color code</h1>
-        <div class="input">
-          <label>Enter the row number</label>
-          <input type="text" id="row1" />
-          <br />
-          <label>Enter the col number</label>
-          <input type="text" id="col1" /><br />
-          <label>Enter color name/HEX code</label>
-          <input type="text" id="color" />
-        </div>
-
-        <button
-          onclick="colorcode(document.getElementById('row1').value,document.getElementById('col1').value,document.getElementById('color').value)"
-        >
-          Change color
-        </button>
-      </div>
+    <img src="youtube.png" alt="" class="logo" />
+    <header id="head"></header>
+    <div id="search" class="input">
+      <input id="field" placeholder="Topic" class="input-field" type="text" />
+      <button id="btn" class="search_button">Search</button>
     </div>
-    <hr />
-    <div class="insert" id="choice1">
-      <div class="one" id="insert1"><p>div 1</p></div>
-      <div class="three" id="insert3"><p>div 3</p></div>
-    </div>
-    <div id="table"></div>
+
+    <div id="content" class="table-content"></div>
+    <div class="pagination" id="page"></div>
   </body>
-  <script src="script.js"></script>
+  <script src="script.js" type="module"></script>
+  <!-- <script src="pagination.js"></script> -->
 </html>
