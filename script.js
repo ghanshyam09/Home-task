@@ -213,9 +213,8 @@ function pagination(search) {
     .querySelectorAll(".pno")
     .forEach((tag) => tag.addEventListener("click", () => changePage(tag)));
 }
-window.onresize = function () {
-  location.reload();
-};
+window.addEventListener('resize',()=>location.reload());
+
 function changePage(tag) {
   let curr = document.querySelector(".pagination-btn li.active");
 
