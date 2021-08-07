@@ -5,7 +5,7 @@ var prevSearch = "",
     pageToken = " ",
     prevToken,
     nextToken,
-    content;
+    pages;
 var head = document.getElementById("head");
 head.innerHTML = "<ul class=\"topnav\">\n<li><a href='#' class=\"active\">All</a></li>\n<li><a href='#' >News</a></li>\n<li><a href='#' >Music</a></li>\n<li><a href='#' >Sports</a></li>\n<li><a href='#' >Movies</a></li>\n</ul>";
 document.getElementById("btn").addEventListener("click", function () {
@@ -48,7 +48,7 @@ function getData(search, callback) {
           main = document.getElementById("content");
           main.innerHTML = "";
           page = document.getElementById("page");
-          content = page.innerHTML;
+          pages = page.innerHTML;
           page.innerHTML = "";
           document.getElementById("spinner").className = "spinner";
           _context.next = 8;
@@ -258,7 +258,7 @@ function createElements(tablecontent) {
     anchor.append(article);
     main.append(anchor);
   });
-  if (search === prevSearch) document.getElementById("page").innerHTML = content;
+  if (search === prevSearch) document.getElementById("page").innerHTML = pages;
   pagination(search);
 }
 
@@ -279,9 +279,6 @@ function pagination(search) {
 
 window.addEventListener("resize", function () {
   return location.reload();
-});
-window.addEventListener("scroll", function () {
-  return true;
 });
 
 function changePage(tag) {
