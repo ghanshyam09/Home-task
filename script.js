@@ -34,15 +34,6 @@ function activeAnchors(anchor) {
   anchor.className = "active";
   getData(anchor.text, getStats);
 }
-async function stats(vid) {
-  let res = await fetch(
-    `https://www.googleapis.com/youtube/v3/videos?key=
-    ${API_KEY}&id=${vid}&part=statistics`
-  );
-  let stat = await res.json();
-
-  return stat.items[0].statistics.viewCount;
-}
 
 var data;
 getData("", getStats);

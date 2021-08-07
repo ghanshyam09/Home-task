@@ -36,40 +36,14 @@ function activeAnchors(anchor) {
   getData(anchor.text, getStats);
 }
 
-function stats(vid) {
-  var res, stat;
-  return regeneratorRuntime.async(function stats$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return regeneratorRuntime.awrap(fetch("https://www.googleapis.com/youtube/v3/videos?key=\n    ".concat(API_KEY, "&id=").concat(vid, "&part=statistics")));
-
-        case 2:
-          res = _context.sent;
-          _context.next = 5;
-          return regeneratorRuntime.awrap(res.json());
-
-        case 5:
-          stat = _context.sent;
-          return _context.abrupt("return", stat.items[0].statistics.viewCount);
-
-        case 7:
-        case "end":
-          return _context.stop();
-      }
-    }
-  });
-}
-
 var data;
 getData("", getStats);
 
 function getData(search, callback) {
   var main, page, response, snippet;
-  return regeneratorRuntime.async(function getData$(_context2) {
+  return regeneratorRuntime.async(function getData$(_context) {
     while (1) {
-      switch (_context2.prev = _context2.next) {
+      switch (_context.prev = _context.next) {
         case 0:
           main = document.getElementById("content");
           main.innerHTML = "";
@@ -77,16 +51,16 @@ function getData(search, callback) {
           content = page.innerHTML;
           page.innerHTML = "";
           document.getElementById("spinner").className = "spinner";
-          _context2.next = 8;
+          _context.next = 8;
           return regeneratorRuntime.awrap(fetch("https://www.googleapis.com/youtube/v3/search?key=\n      ".concat(API_KEY, "\n      &type=video&part=snippet&pageToken=").concat(pageToken, "&maxResults=15&q=\n      ").concat(search)));
 
         case 8:
-          response = _context2.sent;
-          _context2.next = 11;
+          response = _context.sent;
+          _context.next = 11;
           return regeneratorRuntime.awrap(response.json());
 
         case 11:
-          snippet = _context2.sent;
+          snippet = _context.sent;
           data = snippet.items;
           console.log("pppp");
           nextToken = snippet.nextPageToken;
@@ -95,7 +69,7 @@ function getData(search, callback) {
 
         case 17:
         case "end":
-          return _context2.stop();
+          return _context.stop();
       }
     }
   });
@@ -103,33 +77,33 @@ function getData(search, callback) {
 
 function getStats(items, cb) {
   var i, time, res, stat;
-  return regeneratorRuntime.async(function getStats$(_context3) {
+  return regeneratorRuntime.async(function getStats$(_context2) {
     while (1) {
-      switch (_context3.prev = _context3.next) {
+      switch (_context2.prev = _context2.next) {
         case 0:
-          _context3.t0 = regeneratorRuntime.keys(items);
+          _context2.t0 = regeneratorRuntime.keys(items);
 
         case 1:
-          if ((_context3.t1 = _context3.t0()).done) {
-            _context3.next = 14;
+          if ((_context2.t1 = _context2.t0()).done) {
+            _context2.next = 14;
             break;
           }
 
-          i = _context3.t1.value;
+          i = _context2.t1.value;
           time = getDiff(new Date(items[i].snippet.publishedAt), Date.now());
-          _context3.next = 6;
+          _context2.next = 6;
           return regeneratorRuntime.awrap(fetch("https://www.googleapis.com/youtube/v3/videos?key=\n      ".concat(API_KEY, "&id=").concat(items[i].id.videoId, "&part=statistics")));
 
         case 6:
-          res = _context3.sent;
-          _context3.next = 9;
+          res = _context2.sent;
+          _context2.next = 9;
           return regeneratorRuntime.awrap(res.json());
 
         case 9:
-          stat = _context3.sent;
+          stat = _context2.sent;
           data[i].sinceUploaded = time;
           data[i].statistics = stat.items[0].statistics;
-          _context3.next = 1;
+          _context2.next = 1;
           break;
 
         case 14:
@@ -137,7 +111,7 @@ function getStats(items, cb) {
 
         case 15:
         case "end":
-          return _context3.stop();
+          return _context2.stop();
       }
     }
   });
@@ -145,32 +119,32 @@ function getStats(items, cb) {
 
 function getChannelinfo(items, cb) {
   var i, res, chinfo;
-  return regeneratorRuntime.async(function getChannelinfo$(_context4) {
+  return regeneratorRuntime.async(function getChannelinfo$(_context3) {
     while (1) {
-      switch (_context4.prev = _context4.next) {
+      switch (_context3.prev = _context3.next) {
         case 0:
-          _context4.t0 = regeneratorRuntime.keys(items);
+          _context3.t0 = regeneratorRuntime.keys(items);
 
         case 1:
-          if ((_context4.t1 = _context4.t0()).done) {
-            _context4.next = 12;
+          if ((_context3.t1 = _context3.t0()).done) {
+            _context3.next = 12;
             break;
           }
 
-          i = _context4.t1.value;
-          _context4.next = 5;
+          i = _context3.t1.value;
+          _context3.next = 5;
           return regeneratorRuntime.awrap(fetch("https://www.googleapis.com/youtube/v3/channels?part=snippet&id=".concat(items[i].snippet.channelId, "&key=").concat(API_KEY)));
 
         case 5:
-          res = _context4.sent;
-          _context4.next = 8;
+          res = _context3.sent;
+          _context3.next = 8;
           return regeneratorRuntime.awrap(res.json());
 
         case 8:
-          chinfo = _context4.sent;
+          chinfo = _context3.sent;
           data[i].channelthumbnail = chinfo.items[0].snippet.thumbnails["default"].url; // console.log(data[i]);
 
-          _context4.next = 1;
+          _context3.next = 1;
           break;
 
         case 12:
@@ -178,7 +152,7 @@ function getChannelinfo(items, cb) {
 
         case 13:
         case "end":
-          return _context4.stop();
+          return _context3.stop();
       }
     }
   });
