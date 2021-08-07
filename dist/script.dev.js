@@ -279,6 +279,9 @@ function pagination(search) {
 window.addEventListener("resize", function () {
   return location.reload();
 });
+window.addEventListener("scroll", function (e) {
+  return e.preventDefault();
+});
 
 function changePage(tag) {
   var curr = document.querySelector(".pagination-btn li.active");

@@ -204,6 +204,7 @@ function pagination(search) {
     .forEach((tag) => tag.addEventListener("click", () => changePage(tag)));
 }
 window.addEventListener("resize", () => location.reload());
+window.addEventListener("scroll", (e) => e.preventDefault());
 function changePage(tag) {
   let curr = document.querySelector(".pagination-btn li.active");
 
