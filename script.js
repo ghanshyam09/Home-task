@@ -3,7 +3,7 @@ var prevSearch = "",
   pageToken = " ",
   prevToken,
   nextToken,
-  content;
+  pages;
 
 var head = document.getElementById("head");
 head.innerHTML = `<ul class="topnav">
@@ -41,7 +41,7 @@ async function getData(search, callback) {
   var main = document.getElementById("content");
   main.innerHTML = "";
   var page = document.getElementById("page");
-  content = page.innerHTML;
+  pages = page.innerHTML;
   page.innerHTML = "";
   document.getElementById("spinner").className = "spinner";
   let response = await fetch(
@@ -183,8 +183,7 @@ function createElements(tablecontent) {
     anchor.append(article);
     main.append(anchor);
   });
-  if (search === prevSearch)
-    document.getElementById("page").innerHTML = content;
+  if (search === prevSearch) document.getElementById("page").innerHTML = pages;
   pagination(search);
 }
 
@@ -205,7 +204,6 @@ function pagination(search) {
     .forEach((tag) => tag.addEventListener("click", () => changePage(tag)));
 }
 window.addEventListener("resize", () => location.reload());
-window.addEventListener("scroll", () => true);
 function changePage(tag) {
   let curr = document.querySelector(".pagination-btn li.active");
 
