@@ -36,7 +36,7 @@ function activeAnchors(anchor) {
 }
 
 var data;
-getData("", getStats);
+// getData("", getStats);
 async function getData(search, callback) {
   var main = document.getElementById("content");
   main.innerHTML = "";

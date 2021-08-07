@@ -36,8 +36,7 @@ function activeAnchors(anchor) {
   getData(anchor.text, getStats);
 }
 
-var data;
-getData("", getStats);
+var data; // getData("", getStats);
 
 function getData(search, callback) {
   var main, page, response, snippet;
