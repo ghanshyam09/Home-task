@@ -41,7 +41,7 @@ ul.topnav li a {
   font-size: larger;
   text-decoration: none;
 }
-header {
+.header {
   margin: 2em 2em 1em 2em;
 }
 ul.topnav li a:hover:not(.active) {
@@ -218,7 +218,7 @@ ul.topnav li a.active {
     display: flex;
     flex-direction: column;
   }
-  header {
+  .header {
     margin: 2em;
   }
   ul.topnav {
