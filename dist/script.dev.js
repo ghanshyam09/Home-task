@@ -280,6 +280,9 @@ function pagination(search) {
 window.addEventListener("resize", function () {
   return location.reload();
 });
+window.addEventListener("scroll", function () {
+  return true;
+});
 
 function changePage(tag) {
   var curr = document.querySelector(".pagination-btn li.active");
