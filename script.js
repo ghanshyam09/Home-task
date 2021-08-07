@@ -1,4 +1,4 @@
-var API_KEY = "AIzaSyCoRlBSCT5x2ytIouhOJuLuZhTXTfYY2Ew";
+var API_KEY = "AIzaSyAzkKmaRDCqz-8c3EvV-vdM3AnOHRdOt2k";
 var prevSearch = "",
   pageToken = " ",
   prevToken,
