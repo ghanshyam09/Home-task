@@ -7,7 +7,9 @@
     transform: rotate(360deg);
   }
 }
-
+body {
+  overscroll-behavior: none;
+}
 .spinner:before {
   content: "";
   box-sizing: border-box;
@@ -221,8 +223,8 @@ ul.topnav li a.active {
   }
   ul.topnav {
     display: flex;
-    /* overflow-x: scroll; */
-    /* white-space: normal; */
+    overflow-x: scroll;
+    white-space: normal;
     border: 1px solid black;
   }
 
