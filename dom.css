@@ -190,14 +190,14 @@ ul.topnav li a.active {
   .input-field {
     display: inline-block;
     height: 2rem;
-    width: 17em;
+    width: 17rem;
     border-radius: 0;
     border: 1px solid rgb(3, 3, 3);
   }
 
   .input {
     display: flex;
-    margin: 0.5em 0em 1em;
+    margin: 2rem;
     justify-content: center;
   }
   button:active {
@@ -221,8 +221,8 @@ ul.topnav li a.active {
   }
   ul.topnav {
     display: flex;
-    overflow-x: scroll;
-    white-space: normal;
+    /* overflow-x: scroll; */
+    /* white-space: normal; */
     border: 1px solid black;
   }
 

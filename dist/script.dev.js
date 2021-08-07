@@ -301,8 +301,11 @@ function pagination(search) {
       return changePage(tag);
     });
   });
-} // window.addEventListener('resize',()=>location.reload());
+}
 
+window.addEventListener("resize", function () {
+  return location.reload();
+});
 
 function changePage(tag) {
   var curr = document.querySelector(".pagination-btn li.active");
