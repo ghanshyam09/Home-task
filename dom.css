@@ -2,6 +2,9 @@
   margin: 0;
   font-family: Roboto;
 }
+.container {
+  position: relative;
+}
 @keyframes spinner {
   to {
     transform: rotate(360deg);
