@@ -65,7 +65,7 @@ ul.topnav li a.active {
     border-radius: 0;
     border: 1px solid rgb(3, 3, 3);
   }
-  .input {
+  .search {
     display: flex;
     margin: 1rem 2rem 1rem 2rem;
     justify-content: center;
@@ -202,8 +202,9 @@ ul.topnav li a.active {
     background-color: #ffffff;
   }
 
-  .input {
+  .search {
     display: flex;
+    flex-direction: column;
     margin: 2rem;
     justify-content: center;
   }

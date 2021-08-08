@@ -4,15 +4,17 @@ var prevSearch = "",
   prevToken,
   nextToken,
   pages;
-
-var head = document.getElementById("head");
-head.innerHTML = `<ul class="topnav">
+addNav();
+function addNav() {
+  var head = document.getElementById("head");
+  head.innerHTML = `<ul class="topnav">
 <li><a href='#' class="active">All</a></li>
 <li><a href='#' >News</a></li>
 <li><a href='#' >Music</a></li>
 <li><a href='#' >Sports</a></li>
 <li><a href='#' >Movies</a></li>
 </ul>`;
+}
 // document.getElementById("btn").addEventListener("click", () => {
 //   let search = document.getElementById("field").value;
 //   for (let i = 0; i < anchors.length; i++) {
