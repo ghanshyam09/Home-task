@@ -41,7 +41,8 @@ function activeAnchors(anchor) {
   getData(anchor.text, getStats);
 }
 
-var data; // getData("", getStats);
+var data;
+getData("", getStats);
 
 function getData(search, callback) {
   var main, page, response, snippet;
@@ -262,6 +263,7 @@ function createElements(tablecontent) {
     anchor.append(article);
     main.append(anchor);
   });
+  var search = document.getElementById("field").value;
   if (search === prevSearch) document.getElementById("page").innerHTML = pages;
   pagination(search);
 }
@@ -279,9 +281,7 @@ function pagination(search) {
       return changePage(tag);
     });
   });
-} // window.addEventListener("resize", () => location.reload());
-// window.addEventListener("scroll", (e) => e.preventDefault());
-
+}
 
 function changePage(tag) {
   var curr = document.querySelector(".pagination-btn li.active");

@@ -17,7 +17,7 @@ function addNav() {
 }
 
 document.getElementById("btn").addEventListener("click", () => {
-  var search = document.getElementById("field").value;
+  let search = document.getElementById("field").value;
   for (let i = 0; i < anchors.length; i++) {
     anchors[i].className = "";
   }
@@ -39,7 +39,7 @@ function activeAnchors(anchor) {
 }
 
 var data;
-// getData("", getStats);
+getData("", getStats);
 async function getData(search, callback) {
   var main = document.getElementById("content");
   main.innerHTML = "";
@@ -186,6 +186,8 @@ function createElements(tablecontent) {
     anchor.append(article);
     main.append(anchor);
   });
+  let search = document.getElementById("field").value;
+
   if (search === prevSearch) document.getElementById("page").innerHTML = pages;
   pagination(search);
 }
@@ -206,8 +208,7 @@ function pagination(search) {
     .querySelectorAll(".pno")
     .forEach((tag) => tag.addEventListener("click", () => changePage(tag)));
 }
-// window.addEventListener("resize", () => location.reload());
-// window.addEventListener("scroll", (e) => e.preventDefault());
+
 function changePage(tag) {
   let curr = document.querySelector(".pagination-btn li.active");
 
