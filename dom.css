@@ -11,8 +11,8 @@
   }
 }
 body {
-  touch-action: none;
-  overscroll-behavior-y: hidden;
+  touch-action: auto;
+  /* overscroll-behavior: hidden; */
 }
 .spinner:before {
   content: "";
