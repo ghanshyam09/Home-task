@@ -204,7 +204,6 @@ ul.topnav li a.active {
 
   .search {
     display: flex;
-    flex-direction: column;
     margin: 2rem;
     justify-content: center;
   }
