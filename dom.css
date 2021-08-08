@@ -196,6 +196,9 @@ ul.topnav li a.active {
     width: 17rem;
     border-radius: 0;
     border: 1px solid rgb(3, 3, 3);
+    color: #000000;
+    text-indent: 1em;
+    background-color: #ffffff;
   }
 
   .input {
