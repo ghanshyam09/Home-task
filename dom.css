@@ -197,6 +197,7 @@ ul.topnav li a.active {
     border-radius: 0;
     border: 1px solid rgb(3, 3, 3);
     color: #000000;
+    position: relative;
     text-indent: 1em;
     background-color: #ffffff;
   }
