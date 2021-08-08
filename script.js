@@ -15,13 +15,14 @@ function addNav() {
 <li><a href='#' >Movies</a></li>
 </ul>`;
 }
-// document.getElementById("btn").addEventListener("click", () => {
-//   let search = document.getElementById("field").value;
-//   for (let i = 0; i < anchors.length; i++) {
-//     anchors[i].className = "";
-//   }
-//   getData(search, getStats);
-// });
+
+document.getElementById("btn").addEventListener("click", () => {
+  var search = document.getElementById("field").value;
+  for (let i = 0; i < anchors.length; i++) {
+    anchors[i].className = "";
+  }
+  getData(search, getStats);
+});
 var anchors = document.querySelectorAll("a");
 console.log(anchors);
 anchors.forEach((tag) =>
@@ -205,8 +206,8 @@ function pagination(search) {
     .querySelectorAll(".pno")
     .forEach((tag) => tag.addEventListener("click", () => changePage(tag)));
 }
-window.addEventListener("resize", () => location.reload());
-window.addEventListener("scroll", (e) => e.preventDefault());
+// window.addEventListener("resize", () => location.reload());
+// window.addEventListener("scroll", (e) => e.preventDefault());
 function changePage(tag) {
   let curr = document.querySelector(".pagination-btn li.active");
 
