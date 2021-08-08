@@ -130,7 +130,7 @@ ul.topnav li a.active {
     background-color: rgb(245, 239, 239);
     text-decoration: none;
   }
-  article:hover {
+  .item:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 

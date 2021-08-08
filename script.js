@@ -137,7 +137,7 @@ function createElements(tablecontent) {
   document.getElementById("spinner").className = "";
   articles.forEach((item) => {
     let anchor = document.createElement("a");
-    let article = document.createElement("article");
+    let article = document.createElement("div");
     article.className = "item";
     anchor.target = "_blank";
     anchor.href = `https://www.youtube.com/watch?v=${item.vidId}`;
