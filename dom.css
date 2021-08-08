@@ -11,6 +11,7 @@
   }
 }
 body {
+  touch-action: none;
   overscroll-behavior-y: hidden;
 }
 .spinner:before {
