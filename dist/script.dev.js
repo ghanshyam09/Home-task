@@ -11,15 +11,17 @@ addNav();
 function addNav() {
   var head = document.getElementById("head");
   head.innerHTML = "<ul class=\"topnav\">\n<li><a href='#' class=\"active\">All</a></li>\n<li><a href='#' >News</a></li>\n<li><a href='#' >Music</a></li>\n<li><a href='#' >Sports</a></li>\n<li><a href='#' >Movies</a></li>\n</ul>";
-} // document.getElementById("btn").addEventListener("click", () => {
-//   let search = document.getElementById("field").value;
-//   for (let i = 0; i < anchors.length; i++) {
-//     anchors[i].className = "";
-//   }
-//   getData(search, getStats);
-// });
+}
 
+document.getElementById("btn").addEventListener("click", function () {
+  var search = document.getElementById("field").value;
 
+  for (var i = 0; i < anchors.length; i++) {
+    anchors[i].className = "";
+  }
+
+  getData(search, getStats);
+});
 var anchors = document.querySelectorAll("a");
 console.log(anchors);
 anchors.forEach(function (tag) {
@@ -277,14 +279,9 @@ function pagination(search) {
       return changePage(tag);
     });
   });
-}
+} // window.addEventListener("resize", () => location.reload());
+// window.addEventListener("scroll", (e) => e.preventDefault());
 
-window.addEventListener("resize", function () {
-  return location.reload();
-});
-window.addEventListener("scroll", function (e) {
-  return e.preventDefault();
-});
 
 function changePage(tag) {
   var curr = document.querySelector(".pagination-btn li.active");
