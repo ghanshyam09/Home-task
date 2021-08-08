@@ -10,10 +10,7 @@
     transform: rotate(360deg);
   }
 }
-body {
-  touch-action: auto;
-  /* overscroll-behavior: hidden; */
-}
+
 .spinner:before {
   content: "";
   box-sizing: border-box;
