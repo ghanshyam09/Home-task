@@ -7,16 +7,14 @@ var prevSearch = "",
     nextToken,
     pages;
 var head = document.getElementById("head");
-head.innerHTML = "<ul class=\"topnav\">\n<li><a href='#' class=\"active\">All</a></li>\n<li><a href='#' >News</a></li>\n<li><a href='#' >Music</a></li>\n<li><a href='#' >Sports</a></li>\n<li><a href='#' >Movies</a></li>\n</ul>";
-document.getElementById("btn").addEventListener("click", function () {
-  var search = document.getElementById("field").value;
+head.innerHTML = "<ul class=\"topnav\">\n<li><a href='#' class=\"active\">All</a></li>\n<li><a href='#' >News</a></li>\n<li><a href='#' >Music</a></li>\n<li><a href='#' >Sports</a></li>\n<li><a href='#' >Movies</a></li>\n</ul>"; // document.getElementById("btn").addEventListener("click", () => {
+//   let search = document.getElementById("field").value;
+//   for (let i = 0; i < anchors.length; i++) {
+//     anchors[i].className = "";
+//   }
+//   getData(search, getStats);
+// });
 
-  for (var i = 0; i < anchors.length; i++) {
-    anchors[i].className = "";
-  }
-
-  getData(search, getStats);
-});
 var anchors = document.querySelectorAll("a");
 console.log(anchors);
 anchors.forEach(function (tag) {

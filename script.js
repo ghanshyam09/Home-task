@@ -13,13 +13,13 @@ head.innerHTML = `<ul class="topnav">
 <li><a href='#' >Sports</a></li>
 <li><a href='#' >Movies</a></li>
 </ul>`;
-document.getElementById("btn").addEventListener("click", () => {
-  let search = document.getElementById("field").value;
-  for (let i = 0; i < anchors.length; i++) {
-    anchors[i].className = "";
-  }
-  getData(search, getStats);
-});
+// document.getElementById("btn").addEventListener("click", () => {
+//   let search = document.getElementById("field").value;
+//   for (let i = 0; i < anchors.length; i++) {
+//     anchors[i].className = "";
+//   }
+//   getData(search, getStats);
+// });
 var anchors = document.querySelectorAll("a");
 console.log(anchors);
 anchors.forEach((tag) =>
