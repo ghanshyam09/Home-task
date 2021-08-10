@@ -66,13 +66,13 @@ function getData(search, callback) {
 
         case 11:
           snippet = _context.sent;
-          data = snippet.items;
-          console.log("pppp");
+          data = snippet.items; // console.log("pppp");
+
           nextToken = snippet.nextPageToken;
           prevToken = snippet.prevPageToken;
           callback(snippet.items, getChannelinfo);
 
-        case 17:
+        case 16:
         case "end":
           return _context.stop();
       }

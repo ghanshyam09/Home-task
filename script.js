@@ -55,7 +55,7 @@ async function getData(search, callback) {
   );
   let snippet = await response.json();
   data = snippet.items;
-  console.log("pppp");
+  // console.log("pppp");
   nextToken = snippet.nextPageToken;
   prevToken = snippet.prevPageToken;
   callback(snippet.items, getChannelinfo);
